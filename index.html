@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <main>
+    <section class="flex">
+    <img id="star" src="./images/icon-star.svg" alt="Star">
+    <h2>How did we do?</h2>
+    <small>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</small>
+    <div class="ratings">
+      <div class="rating">1</div>
+      <div class="rating">2</div>
+      <div class="rating">3</div>
+      <div class="rating">4</div>
+      <div class="rating">5</div>
+    </div>
+    <button class="submit noHover" type="submit">SUBMIT</button>
+  </section>
+  <section class="hidden">
+    <img src="./images/illustration-thank-you.svg" alt="thank-you">
+    <small class="selected-message">You selected <span>4</span> out of 5</small>
+    <h2>Thank You!</h2>
+    <small class="message">We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</small>
+  </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

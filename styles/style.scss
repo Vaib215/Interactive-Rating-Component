@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    // Fonts
+    --ff : 'Overpass', sans-serif;
+    --fsize : 15px;
+    // Colors
+    --clr-pri : hsl(25, 97%, 53%);
+    --clr-heading : hsl(0, 0%, 100%);
+    --clr-text : hsl(217, 12%, 63%);
+    --clr-rating-bg : hsla(216, 12%, 54%, 0.15); 
+    --clr-card-bg : hsla(214, 29%, 17%, 0.815);
+    --clr-bg : hsl(216, 12%, 8%);
+}
+
+body {
+    align-items: center;
+    background-color: var(--clr-bg);
+    color: var(--clr-text);
+    display: flex;
+    font-family: var(--ff);
+    font-size: var(--fsize);
+    justify-content: center;
+    min-height: 100vh;
+}
+
+main {
+    background-color: var(--clr-card-bg);
+    margin: auto;
+    padding: 2em;
+    width: 24em;
+    border-radius: 2em;
+}
+
+#star {
+    background-color: var(--clr-rating-bg);
+    border-radius: 100%;
+    width: 2.5em;
+    padding: 0.75em;
+}
+
+h2 {
+    color: var(--clr-heading);
+    margin: 1.5em 0 0.5em;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.ratings {
+    display: flex;
+    gap: 1.5em;
+    margin: 1.5em 0 1.5em;
+    .rating {
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        width: 3em;
+        aspect-ratio: 1;
+        background-color: var(--clr-rating-bg);
+        border-radius: 100%;
+        &:hover {
+            color: var(--clr-heading);
+            background-color: var(--clr-pri);
+        }
+    }
+    .selected {
+        background-color: var(--clr-text);
+        color: white;
+    }
+}
+
+button {
+    width: 100%;
+    padding: 1em;
+    border-radius: 2em;
+    cursor: pointer;
+    color: var(--clr-heading);
+    background: var(--clr-pri);
+    border: none;
+    font-weight: 700;
+    letter-spacing: 0.2ch;
+    transition-duration: 125ms;
+    &:focus{
+        outline: none;
+    }
+    &:hover{
+        background-color: var(--clr-heading);
+        color: var(--clr-pri);
+    }
+}
+
+.noHover{
+    pointer-events: none;
+    background-color: var(--clr-rating-bg);
+}
+
+.hidden {
+    display: none;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.message {
+    margin-top: -1em;
+    text-align: center;
+    line-height: 1.6;
+    padding: 0.6em;
+}
+
+.selected-message {
+    color: var(--clr-pri);
+    border-radius: 2em;
+    padding: 0.5em 1.5em;
+    margin-top: 2em;
+    background-color: var(--clr-rating-bg);
+}
